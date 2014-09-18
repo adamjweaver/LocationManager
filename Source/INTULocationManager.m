@@ -487,5 +487,17 @@ static id _sharedInstance;
         }
     }
 }
+    
+    - (void)startMonitoringForRegion:(CLRegion *)region{
+        [self.locationManager startMonitoringForRegion:region];
+    }
+
+    - (void)stopMonitoringForRegion:(CLRegion *)region{
+        [self.locationManager stopMonitoringForRegion:region];
+    }
+    
+    - (void)monitoredRegions {
+        [self.locationManager monitoredRegions];
+    }
 
 @end
