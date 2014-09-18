@@ -82,4 +82,9 @@
 /** Immediately cancels the location request with the given requestID (if it exists), without executing the original request block. */
 - (void)cancelLocationRequest:(NSInteger)requestID;
 
+//passthrough to CLLocationManager
+- (void)startMonitoringForRegion:(CLRegion *)region;
+- (void)stopMonitoringForRegion:(CLRegion *)region;
+- (void)monitoredRegions;
+
 @end
